@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 14% 97%;
+    --foreground: 222 47% 11%;
+    --primary: 164 100% 21%; /* #006A4E */
+    --primary-foreground: 0 0% 100%;
+    --accent: 185 81% 29%; /* #0E7C86 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 65% 51%; /* #D32F2F */
+    --destructive-foreground: 0 0% 100%;
+  }
+
+  body {
+    @apply bg-surface-bg text-slate-800 font-sans min-h-screen antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* High contrast mode accessibility */
+  .high-contrast {
+    filter: contrast(125%);
+  }
+
+  .high-contrast body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  .high-contrast .bg-white,
+  .high-contrast .bg-surface-card {
+    background-color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+    color: #ffffff !important;
+  }
+
+  /* Large text mode accessibility */
+  .large-text {
+    font-size: 112.5%;
+  }
+
+  /* Custom focus states for WCAG AA compliance */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2 ring-offset-white;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print styling for Digital Kiosk Receipt and Evidence QR tags */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-receipt,
+  .printable-receipt * {
+    visibility: visible;
+  }
+  .printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Leaflet map styling fixes */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  z-index: 10;
+}

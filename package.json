@@ -1,0 +1,11 @@
+{
+  "name": "nyayasetu-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm.cmd --prefix nyayasetu-poc run dev",
+    "build": "npm.cmd --prefix nyayasetu-poc run build",
+    "preview": "npm.cmd --prefix nyayasetu-poc run preview",
+    "test": "npm.cmd --prefix nyayasetu-poc test",
+    "postinstall": "npm.cmd --prefix nyayasetu-poc install"
+  }
+}

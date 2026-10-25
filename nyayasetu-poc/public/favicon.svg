@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="48" fill="#006A4E" />
+  <circle cx="50" cy="50" r="28" fill="#D32F2F" opacity="0.15" />
+  <!-- Scales of Justice / Bridge motif -->
+  <path d="M50 20 V75" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 34 H74" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M26 34 L18 52 H34 Z" fill="#0E7C86" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M74 34 L66 52 H82 Z" fill="#0E7C86" stroke="#FFFFFF" stroke-width="2"/>
+  <path d="M32 75 H68" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <!-- Bridge arch underneath -->
+  <path d="M20 80 Q 50 62 80 80" stroke="#F5A524" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
